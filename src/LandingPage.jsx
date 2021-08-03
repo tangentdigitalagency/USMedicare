@@ -1,7 +1,7 @@
 import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } from 'antd';
 import Grid from '@material-ui/core/Grid';
 
-import logo from './Assets/cme.png';
+import logo from './Assets/usamedicare.png';
 // import ehthos from './Assets/ethos.png';
 // import ladder from './Assets/ladder.svg';
 // import tamer from './Assets/tamerica.png';
@@ -52,11 +52,11 @@ function LandingPage(props) {
 									<div className='block-left-hero'>
 										<Row>
 											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Burial Insurance At An Affordable Price
+												<h1 className='hero_heading'>Compare Multiple Medicare Insurance Quotes With USA Medicare Quotes
 </h1>
 												<p className='text-white para-white'>
-												Here at Covermyexpense.com we are committed to providing all the information needed so you are confident to make an informed decision regarding your burial insurance policy. We work with multiple providers to make sure that you receive the right final expense insurance quotes for your needs and budget. If you ever have any questions, please do not hesitate to contact us. We’re here to help you and the whole family.
-
+												Explore your health options beyond the Medicare Part A and Part B offered by the government.  Select a personalized healthcare plan that is a perfect fit for you and the family. Get a Medicare quote today and lower your overall medical costs. <br />
+												Give us a call or fill out the form to speak with a licensed insurance agent for a free, no-obligation consultation and learn about your Medicare Insurance options. 
 
 
 												</p>
@@ -103,20 +103,17 @@ function LandingPage(props) {
 					<section className='container'>
 						<Row>
 							<Col span={24}>
-								<h1 className='font-weight-bold ml-md-5'>Burial insurance</h1>
+								<h1 className='font-weight-bold ml-md-5'>What is medicare?</h1>
 							</Col>
 						</Row>
 						<Row>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<p>
-								You can’t predict the future. So, it’s good to plan ahead. Our Final Expense insurance plans will help provide a foundation for your family after you’re gone.
-								</p>
-								<p>
-								Here at Covermyexpense.com we are committed to providing all the information needed so you are confident to make an informed decision regarding your burial insurance policy. We work with multiple providers to make sure that you receive the right final expense insurance quotes for your needs and budget. If you ever have any questions, please do not hesitate to contact us. We’re here to help you and the whole family.
+								Medicare is a government program that provides individuals 65 years or older healthcare coverage at a small cost. Original Medicare coverage is broken into two parts—Part A and Part B—and is accepted by nearly every doctor and hospital in the country. Medicare Part A covers inpatient or hospital stays while Part B covers outpatient or medical care. 
 
 
 								</p>
-								<p>You’ll want to give strong consideration to the funding aspect of your burial arrangements. You will want to ask yourself if your current funding (insurance, savings, etc.) will be sufficient and available when that time comes? Will your present insurance be needed to settle other expenses that could include medical bills, estate taxes, etc.? Will your present insurance or savings keep pace with funeral inflation costs? If you answered no to any of these questions, then you might wish to think about additional insurance that is designed specifically for your final expenses. Burial insurance policies can be made in small amounts to help with your existing insurance or larger amounts to cover all burial and funeral costs.
+								<p>Together, Part A and B cover about 80% of the typical healthcare costs seniors face—leaving a few significant gaps in coverage. Medicare Supplement (Medigap) plans are supplemental policies designed to help extend coverage, lessen costs, and ultimately give beneficiaries peace of mind at all times.  Explore Medicare plans with US Medicare! 
 
 </p>
 								<Button
@@ -211,7 +208,7 @@ function LandingPage(props) {
 								<img src={quote} alt='quote' width='21' className='quote' />
 								<p className='quote-text-v1'>
 									<em className='font-italic italic-text-4'>
-									“I have never had such a great experience getting insurance quotes than I had using Cover My Expense.  Their form is super quick and simple.  As soon as I hit submit, they matched me with a great insurance agent named Sandy.  I had all the information and quotes I had to make the decision to switch my insurance.  Thank you Cover My Expense for the great connection!" <br/>
+									“I have never had such a great experience getting insurance quotes than I had using US Medicare Quotes.  Their form is super quick and simple.  As soon as I hit submit, they matched me with a great insurance agent named Sandy.  I had all the information and quotes I had to make the decision to switch my insurance.  Thank you US Medicare Quotes for the great connection!" <br/>
 									</em>
 								</p>
 								
@@ -259,7 +256,7 @@ function LandingPage(props) {
 		
 						<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
-							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Cover My Expense</Typography>
+							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 US Medicare Quotes</Typography>
 							<Typography style={{fontSize: '12px', color: 'rgb(166, 166, 166)' }}>Powered By Quotehound</Typography>
 						</Grid>
 						<Grid item lg={6} xs={false} />

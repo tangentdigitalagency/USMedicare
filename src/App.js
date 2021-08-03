@@ -13,7 +13,7 @@ import { PhoneOutlined } from '@ant-design/icons';
 import tran from './Assets/tran.png'
 
 
-import DesiredCoverage from './components/DesiredCoverage';
+import DesiredCoverage from './components/over65';
 import Gender from './components/gender';
 import Birth from './components/birth';
 import Living from './components/living';
@@ -27,11 +27,11 @@ class App extends Component {
 		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/thank-you'],
 		postData: {
 			//extra entries
-			lp_campaign_id: '60ec904883e96',
-			lp_campaign_key: 'HdnykrcQ76bVq8BtWmFK',
+			lp_campaign_id: '610208246d0ec',
+			lp_campaign_key: 'Yy4MHdVc3ZKWp6q7RXxg',
 			lp_s1: '12',
 			lp_s2: '13',
-			landing_Page: 'covermyexpense.com',
+			landing_Page: 'usmedicarequotes.com',
 			TCPA_Consent: 'Yes',
 			TCPA_Language:
 				'By clicking Get My Quote I provide my electronic signature and express written consent to telemarketing calls, text messages, emails, and postal mail from this Web site, our marketing and re-marketing network, and up to eight insurance companies or their affiliates or representatives at the phone number (including wireless number), email address, and postal address provided by me. I consent to calls and text messages transmitting insurance quotes, or seeking related additional information from me, using an Automatic Telephone Dialing System or prerecorded or artificial voices. I consent that my signature is not a condition of purchasing any property, goods, or services and that I may revoke my consent at any time.',
@@ -41,7 +41,7 @@ class App extends Component {
 			IP_Address: '',
 			user_agent: navigator.userAgent,
 			//s1 form fields
-			desired_coverage: '',
+			are_you_over_or_under_65_years_of_age: '',
 			//S2 form fields
 			gender: '',
 			dob: '',
@@ -66,7 +66,7 @@ class App extends Component {
 			"data": {       
 				  "zip": tempArray.zip,   
 			  },   
-			"placement_id": "YiPFAJc_r0i9fsZr0uP7vvicsinK3Q",    
+			"placement_id": "1J4sG3mXXl-_x6fzSCTcXyOcLeiAIg",    
 			"sub_1": "test sub id",    
 			 "type": "ad_unit",   
 			   "version": 17 }; 
@@ -141,7 +141,7 @@ class App extends Component {
 					<div className='container'>
 						<img
 							// @ts-ignore
-							src={require('./Assets/cme.png')}
+							src={require('./Assets/usamedicare.png')}
 							className='logo'
 														alt=''
 						/>
@@ -171,14 +171,14 @@ class App extends Component {
 								<Route exact path='/step1'>
 									<DesiredCoverage
 										props={this.props}
-										setDesiredCoverage={this.state.postData.desired_coverage}
-										setDesiredCoverage={(v) => {
+										over_65={this.state.postData.are_you_over_or_under_65_years_of_age}
+										over_65={(v) => {
 											this.setState({
 												postData: {
 													...this.state.postData,
 													jornaya_lead_id: document.getElementById('leadid_token').value, 
 													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
-													desired_coverage: v,
+													are_you_over_or_under_65_years_of_age: v,
 												},
 											});
 										}}
@@ -328,7 +328,7 @@ class App extends Component {
 					</Grid>
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
-							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 Cover My Expense</Typography>
+							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 US Medicare Quotes</Typography>
 							<Typography style={{fontSize: '12px', color: 'rgb(166, 166, 166)' }}>Powered By Quotehound</Typography>
 						</Grid>
 						<Grid item lg={6} xs={false} />

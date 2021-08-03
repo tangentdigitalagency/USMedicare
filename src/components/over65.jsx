@@ -10,7 +10,7 @@ class DesiredCoverage extends Component {
  
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.setDesiredCoverage(values.desired_coverage);
+    this.props.over_65(values.are_you_over_or_under_65_years_of_age);
     console.log("Success:", values);
     this.props.history.push("/step2")
   };
@@ -40,18 +40,18 @@ class DesiredCoverage extends Component {
             style={{ paddingTop:"0px" }}
           >
             <Form
-              name="desired_Coverage"
+              name="are_you_over_or_under_65_years_of_age"
               className="mywidth"
               onFinish={this.onFinish}
               initialValues={{
-                desired_coverage: this.props.desired_coverage,
+                are_you_over_or_under_65_years_of_age: this.props.are_you_over_or_under_65_years_of_age,
               }}
               onFinishFailed={this.onFinishFailed}
             >
-              <h3> What's your desired coverage amount?</h3>
+              <h3>Are you over or under 65 years of age?</h3>
               <br />
               <Form.Item
-                name="desired_coverage"
+                name="are_you_over_or_under_65_years_of_age"
                 hasFeedback
                 rules={[
                   {
@@ -60,19 +60,9 @@ class DesiredCoverage extends Component {
                   }
                 ]}
               >
-                <Select size="large" name="desired_coverage" placeholder="Select Coverage">
-                <Option value="5000" >$5,000</Option>
-                <Option value="10000">$10,000</Option>
-                <Option value="1500">$15,000</Option>
-                <Option value="20000">$20,000</Option>
-                <Option value="30000">$30,000</Option>
-                <Option value="40000">$40,000</Option>
-                <Option value="50000">$50,000</Option>
-                <Option value="60000">$60,000</Option>
-                <Option value="70000">$70,000</Option>
-                <Option value="80000">$80,000</Option>
-                <Option value="90000">$90,000</Option>
-                <Option value="100000">$100,000</Option>
+                <Select size="large" name="are_you_over_or_under_65_years_of_age" placeholder="Are you over or under 65?">
+                <Option value="Yes" >I'm <strong>Under</strong> 65 years of age</Option>
+                <Option value="No">I'm <strong> Over </strong> 65 years of age</Option>
                 </Select>
               </Form.Item>
             
