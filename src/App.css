@@ -13,6 +13,21 @@ a {
 	font-family: "Montserrat", sans-serif;
 }
 
+.d-flex {
+	min-height: 40vh;
+}
+
+.container-fluid {
+	height: auto;
+}
+
+.chooseButton {
+	background: white;
+	color: #488BFF;
+	margin: 15px;
+	height: 65px;
+}
+
 .numInput {
 	width: 40%;
 	margin-left: auto;

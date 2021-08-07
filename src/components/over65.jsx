@@ -33,7 +33,7 @@ class DesiredCoverage extends Component {
           totalSteps={this.props.totalSteps}
           previousStep={this.props.previousStep}
         />
-        <div className="d-flex" style={{ minHeight: "60vh" }}>
+        <div className="d-flex">
           <div
             className="card-body d-xl-flex justify-content-center align-items-center"
             align="center"
@@ -60,25 +60,25 @@ class DesiredCoverage extends Component {
                   }
                 ]}
               >
-                <Select size="large" name="are_you_over_or_under_65_years_of_age" placeholder="Are you over or under 65?">
-                <Option value="Yes" >I'm <strong>Under</strong> 65 years of age</Option>
-                <Option value="No">I'm <strong> Over </strong> 65 years of age</Option>
-                </Select>
+
+                <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>I'm <strong> Over </strong> 65</Button>
+
+                <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>I'm <strong> Under </strong> 65</Button>
               </Form.Item>
             
               {/* <Link to="/step2">  */}
               <Form.Item>
         
                
-                <Button type="primary" htmlType="submit" block size="large" 
+                {/* <Button type="primary" htmlType="submit" block size="large"  */}
                 
-                // onClick= {() => this.props.history.push("/step2")}
+                {/* // onClick= {() => this.props.history.push("/step2")} */}
                  
-                >
+                {/* >
             
                 
                Next  
-                </Button>
+                </Button> */}
               
                
               </Form.Item>

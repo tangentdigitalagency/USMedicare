@@ -36,7 +36,7 @@ class Gender extends Component {
 					</Link>
 				</div>
 
-				<div className='d-flex' style={{ minHeight: '50vh' }}>
+				<div className='d-flex'>
 					<div className='card-body d-xl-flex justify-content-center align-items-center' align='center'>
 					<Form
               name="gender"
@@ -59,20 +59,16 @@ class Gender extends Component {
                   }
                 ]}
               >
-                <Select size="large" name="gender" placeholder="Select Gender">
-                <Option value="male" >Male</Option>
-				<Option value="female">Female</Option>
-				<Option value="nonbinary">Non-Binary</Option>
+                  <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Male</Button>
 
-
-                </Select>
+<Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Female</Button>
               </Form.Item>
             
               {/* <Link to="/step2">  */}
               <Form.Item>
         
                
-                <Button type="primary" htmlType="submit" block size="large" 
+                {/* <Button type="primary" htmlType="submit" block size="large" 
                 
                 // onClick= {() => this.props.history.push("/step2")}
                  
@@ -80,7 +76,7 @@ class Gender extends Component {
             
                 
                Next  
-                </Button>
+                </Button> */}
               
                
               </Form.Item>

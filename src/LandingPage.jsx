@@ -1,7 +1,7 @@
 import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } from 'antd';
 import Grid from '@material-ui/core/Grid';
 
-import logo from './Assets/usamedicare.png';
+import logo from './Assets/usmq.png';
 // import ehthos from './Assets/ethos.png';
 // import ladder from './Assets/ladder.svg';
 // import tamer from './Assets/tamerica.png';
@@ -40,7 +40,11 @@ function LandingPage(props) {
 							</a>
 						</Col>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }} className='text-right'>
-							<strong>Call For Free Quote</strong>
+							<Button className="callButton">
+								<a href="">
+									Call For A Free Quote
+								</a>
+							</Button>
 						</Col>
 					</Row>
 				</Header>

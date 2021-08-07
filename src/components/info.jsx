@@ -78,7 +78,7 @@ class Info extends Component {
             </Button>
           </Link>
         </div>
-        <div className="d-flex" style={{ minHeight: "60vh" }}>
+        <div className="d-flex">
           <div
             className="card-body d-xl-flex justify-content-center align-items-center"
             align="center"

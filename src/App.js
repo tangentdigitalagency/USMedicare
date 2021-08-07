@@ -6,7 +6,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import Grid from '@material-ui/core/Grid';
 // @ts-ignore
-import Logo from './Assets/cme.png';
+import Logo from './Assets/usmq.png';
 // @ts-ignore
 import { Button, Typography, Progress } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
@@ -133,7 +133,6 @@ class App extends Component {
 			<div
 				className='container-fluid'
 				style={{
-					minHeight: '100vh',
 					backgroundColor: '#f7f7f7',
 					overflow: 'hidden',
 				}}>
@@ -141,13 +140,15 @@ class App extends Component {
 					<div className='container'>
 						<img
 							// @ts-ignore
-							src={require('./Assets/usamedicare.png')}
+							src={require('./Assets/usmq.png')}
 							className='logo'
 														alt=''
 						/>
-						<b className='nav-item'>Speak To An Agent</b> 
+						
 						<ul className='nav nav-fill'>
 							<li className='nav-item'>
+							<b className='nav-item' style={{padding: "10px"}}>Speak To An Agent</b> 
+
 								<Button
 									type='primary'
 									size='middle'

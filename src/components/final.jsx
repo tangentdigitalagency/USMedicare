@@ -24,7 +24,7 @@ class ThankYou extends Component {
 				<br></br>
 
 				<div className='card shadow-lg' style={{ borderRadius: '25px' }}>				
-				<div className='d-flex' style={{ minHeight: '20vh' }}>
+				<div className='d-flex'>
 					<div className='card-body d-xl-flex justify-content-center align-items-center' align='center'>
 					<div id="mediaalpha_placeholder">
 </div>
