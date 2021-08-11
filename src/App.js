@@ -14,6 +14,7 @@ import tran from './Assets/tran.png'
 
 
 import DesiredCoverage from './components/over65';
+import PartAorB from './components/partab';
 import Gender from './components/gender';
 import Birth from './components/birth';
 import Living from './components/living';
@@ -24,7 +25,7 @@ import LandingPage from './LandingPage';
 class App extends Component {
 	state = {
 		route: '/',
-		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/thank-you'],
+		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6', '/thank-you'],
 		postData: {
 			//extra entries
 			lp_campaign_id: '610208246d0ec',
@@ -42,6 +43,7 @@ class App extends Component {
 			user_agent: navigator.userAgent,
 			//s1 form fields
 			are_you_over_or_under_65_years_of_age: '',
+			are_you_currently_enrolled_in_both_medicare_part_a_part_b: '',
 			//S2 form fields
 			gender: '',
 			dob: '',
@@ -186,7 +188,23 @@ class App extends Component {
 									/>
 								</Route>
 
-								<Route path='/step2'>
+								<Route exact path='/step2'> 
+										<PartAorB 
+											props={this.props}
+											part={this.state.postData.are_you_currently_enrolled_in_both_medicare_part_a_part_b}
+											part={(v) => {
+												this.setState({
+													postData: {
+														...this.state.postData, 
+														are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
+													},
+												});
+											}}
+
+										/>
+								</Route>
+
+								<Route path='/step3'>
 									<Gender
 										chooseGender={this.state.postData.gender}
 										chooseGender={(v) => {
@@ -199,7 +217,7 @@ class App extends Component {
 										}}
 									/>
 								</Route>
-								<Route path='/step3'>
+								<Route path='/step4'>
 									<Birth
 										
 										setBirth={(v) => {
@@ -212,7 +230,7 @@ class App extends Component {
 										}}
 									/>
 								</Route>
-								<Route path='/step4'>
+								<Route path='/step5'>
 
 									<Living
 										address={this.state.postData.address}
@@ -256,7 +274,7 @@ class App extends Component {
 
 									/>
 								</Route>
-								<Route path='/step5'>
+								<Route path='/step6'>
 									<Info 
 										first_name={this.state.postData.first_name}
 										last_name={this.state.postData.last_name}

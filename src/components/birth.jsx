@@ -15,7 +15,7 @@ class Birth extends Component {
 
     this.props.setBirth(values.month + values.day + '/' + values.year)
     console.log("Success:", this.props.setBirth);
-    this.props.history.push("/step4")
+    this.props.history.push("/step5")
   };
 
   onFinishFailed = (errorInfo) => {

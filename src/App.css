@@ -22,10 +22,11 @@ a {
 }
 
 .chooseButton {
-	background: white;
-	color: #488BFF;
+	background: #488BFF;
+	color: #eeee;
 	margin: 15px;
 	height: 65px;
+	border-radius: 10px;
 }
 
 .numInput {

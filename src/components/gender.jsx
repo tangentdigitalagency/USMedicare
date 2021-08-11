@@ -59,9 +59,9 @@ class Gender extends Component {
                   }
                 ]}
               >
-                  <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Male</Button>
+                  <Button size="large" name="gender" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step4")}>Male</Button>
 
-<Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Female</Button>
+<Button size="large" name="gender" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step4")}>Female</Button>
               </Form.Item>
             
               {/* <Link to="/step2">  */}

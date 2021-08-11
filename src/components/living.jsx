@@ -15,7 +15,7 @@ class Living extends Component {
     this.props.setState(values.state)
     
     console.log("Success:", values);
-    this.props.history.push("/step5")
+    this.props.history.push("/step6")
   };
 
   onFinishFailed = (errorInfo) => {

@@ -6,13 +6,13 @@ import {Redirect} from "react-router-dom";
 import {withRouter } from "react-router-dom";
 const {Option} = Select;
 
-class DesiredCoverage extends Component {
+class PartAOrB extends Component {
  
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.over_65(values.are_you_over_or_under_65_years_of_age);
+    this.props.over_65(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b);
     console.log("Success:", values);
-    this.props.history.push("/step2")
+    this.props.history.push("/step3")
   };
 
   onFinishFailed = (errorInfo) => {
@@ -27,7 +27,7 @@ class DesiredCoverage extends Component {
    
     return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
-        <Progress percent={10} status="active" showInfo={true} className="pbar"/>
+        <Progress percent={20} status="active" showInfo={true} className="pbar"/>
         <CommonComponents
           currentStep={this.props.currentStep}
           totalSteps={this.props.totalSteps}
@@ -44,11 +44,10 @@ class DesiredCoverage extends Component {
               className="mywidth"
               onFinish={this.onFinish}
               initialValues={{
-                are_you_over_or_under_65_years_of_age: this.props.are_you_over_or_under_65_years_of_age,
+                are_you_currently_enrolled_in_both_medicare_part_a_part_b: this.props.are_you_currently_enrolled_in_both_medicare_part_a_part_b,
               }}
               onFinishFailed={this.onFinishFailed}
-            >
-              <h3>Are you over or under 65 years of age?</h3>
+            > <h3>Are you currently enrolled in both Medicare Part A & Part B?</h3>
               <br />
               <Form.Item
                 name="are_you_over_or_under_65_years_of_age"
@@ -61,9 +60,9 @@ class DesiredCoverage extends Component {
                 ]}
               >
 
-                <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>I'm <strong> Over </strong> 65</Button>
+                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Yes</Button>
 
-                <Button size="large" name="are_you_over_or_under_65_years_of_age" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step2")}>I'm <strong> Under </strong> 65</Button>
+                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>No</Button>
               </Form.Item>
             
               {/* <Link to="/step2">  */}
@@ -91,4 +90,4 @@ class DesiredCoverage extends Component {
   }
 }
 
-export default withRouter(DesiredCoverage) ;
+export default withRouter(PartAOrB) ;
