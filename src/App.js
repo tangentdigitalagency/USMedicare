@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 // @ts-ignore
 import Logo from './Assets/usmq.png';
 // @ts-ignore
-import { Button, Typography, Progress } from 'antd';
+import { Button, Typography, Progress, Row, Col } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
 import tran from './Assets/tran.png'
 
@@ -21,6 +21,11 @@ import Living from './components/living';
 import Info from './components/info';
 import ThankYou from './components/final.jsx';
 import LandingPage from './LandingPage';
+
+import aet from './Assets/aet.png';
+import humana from './Assets/humana.png';
+import kra from './Assets/kra.png';
+import uhs from './Assets/uhs.png';
 
 class App extends Component {
 	state = {
@@ -149,7 +154,7 @@ class App extends Component {
 						
 						<ul className='nav nav-fill'>
 							<li className='nav-item'>
-							<b className='nav-item' style={{padding: "10px"}}>Speak To An Agent</b> 
+							{/* <b className='nav-item' style={{padding: "10px"}}>Speak To An Agent</b>  */}
 
 								<Button
 									type='primary'
@@ -171,7 +176,7 @@ class App extends Component {
 					<div className='row'>
 						<div className='col'>
 							<Switch>
-								<Route exact path='/step1'>
+								{/* <Route exact path='/step1'>
 									<DesiredCoverage
 										props={this.props}
 										over_65={this.state.postData.are_you_over_or_under_65_years_of_age}
@@ -186,7 +191,7 @@ class App extends Component {
 											});
 										}}
 									/>
-								</Route>
+								</Route> */}
 
 								<Route exact path='/step2'> 
 										<PartAorB 
@@ -196,6 +201,8 @@ class App extends Component {
 												this.setState({
 													postData: {
 														...this.state.postData, 
+														jornaya_lead_id: document.getElementById('leadid_token').value, 
+													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
 														are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
 													},
 												});
@@ -336,11 +343,29 @@ class App extends Component {
 
 				
 
-				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '100px'}}>
+				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '20px'}}>
 					<Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
 							<Typography style={{ fontWeight: 700, lineHeight: 1.5, paddingBottom: '25px',}}>Providers Include:</Typography>
-							<img src={tran} alt='logo1' className=' blogo' />
+							<div className='section-two-imgs '>
+							<Row gutter={16}>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
+									<img src={aet} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={humana} className="logoSize"/>
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={kra} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={uhs} className="logoSize aig"/>
+								</Col>
+
+							</Row>
+
+							
+							</div>
 
 						</Grid>
 

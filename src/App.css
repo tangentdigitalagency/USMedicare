@@ -27,6 +27,7 @@ a {
 	margin: 15px;
 	height: 65px;
 	border-radius: 10px;
+	min-width: 150px;
 }
 
 .numInput {
@@ -36,12 +37,50 @@ a {
 }
 
 .logo {
-	width: 250px;
+	width: 150px;
 }
 
-.blogo{
-	width: 50%;
+.landing-page .section-two-imgs {
+    margin: 0 auto;
 }
+
+.logoSize {
+    max-width: 150px;
+    align: center;
+}
+
+ .section-two-container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.column {
+    text-align: center;
+
+}
+
+
+.logosTop {
+    width: 100%;
+    display: block;
+
+}
+@media (min-width: 576px) {  
+	.logosTop{
+		width: 100%;
+	}
+}
+@media (min-width: 768px) { 
+	.logosTop{
+		width: 100%;
+	}
+ }
+@media (min-width: 992px) { 
+	.logosTop{
+		width: 50%;
+	}
+ }
 
 .right-number {
 

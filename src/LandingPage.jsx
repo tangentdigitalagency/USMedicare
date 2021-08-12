@@ -2,10 +2,11 @@ import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } fr
 import Grid from '@material-ui/core/Grid';
 
 import logo from './Assets/usmq.png';
-// import ehthos from './Assets/ethos.png';
-// import ladder from './Assets/ladder.svg';
-// import tamer from './Assets/tamerica.png';
-// import prud from './Assets/prudential.png';
+import aet from './Assets/aet.png';
+import humana from './Assets/humana.png';
+import kra from './Assets/kra.png';
+import uhs from './Assets/uhs.png';
+
 import heroImg from './Assets/couple.png';
 // import aig from './Assets/aig.png';
 import all from './Assets/all.png'; 
@@ -68,7 +69,7 @@ function LandingPage(props) {
 												<Button
 													onClick={() => {
 														props.changeRoute();
-														history.push('/step1');
+														history.push('/step2');
 													}}
 													type='block '
 													size='large'
@@ -97,8 +98,22 @@ function LandingPage(props) {
 									</p>
 								</Col>
 							</Row>
-							<div className='section-two-img-container'>
-							<img src={all} alt='logo1' className=' logosTop' />
+							<div className='section-two-imgs '>
+							<Row gutter={16}>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
+									<img src={aet} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={humana} className="logoSize"/>
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={kra} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={uhs} className="logoSize aig"/>
+								</Col>
+
+							</Row>
 
 							
 							</div>
@@ -123,7 +138,7 @@ function LandingPage(props) {
 								<Button
 													onClick={() => {
 														props.changeRoute();
-														history.push('/step1');
+														history.push('/step2');
 													}}
 													type='block '
 													size='large'
@@ -149,7 +164,7 @@ function LandingPage(props) {
 											<Button
 													onClick={() => {
 														props.changeRoute();
-														history.push('/step1');
+														history.push('/step2');
 													}}
 													type='block '
 													size='large'
@@ -221,7 +236,7 @@ function LandingPage(props) {
 									<Button
 													onClick={() => {
 														props.changeRoute();
-														history.push('/step1');
+														history.push('/step2');
 													}}
 													type='block '
 													size='large'
@@ -245,7 +260,25 @@ function LandingPage(props) {
 								</Col>
 							</Row>
 
-							<img src={all} alt='logo1' className=' logosTop' />
+							<div className='section-two-imgs '>
+							<Row gutter={16}>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
+									<img src={aet} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={humana} className="logoSize"/>
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={kra} className="logoSize" />
+								</Col>
+								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
+									<img src={uhs} className="logoSize aig"/>
+								</Col>
+
+							</Row>
+
+							
+							</div>
 
 							<Row>			
 							</Row>

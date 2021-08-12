@@ -166,11 +166,47 @@
     margin: 50px;
 }
 
+.landing-page .section-two-imgs {
+    margin: 0 auto;
+}
+
+.logoSize {
+    max-width: 150px;
+    align: center;
+}
+
 .landing-page .section-two-container {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
 }
+
+.column {
+    text-align: center;
+
+}
+
+
+.logosTop {
+    width: 100%;
+    display: block;
+
+}
+@media (min-width: 576px) {  
+	.logosTop{
+		width: 100%;
+	}
+}
+@media (min-width: 768px) { 
+	.logosTop{
+		width: 100%;
+	}
+ }
+@media (min-width: 992px) { 
+	.logosTop{
+		width: 50%;
+	}
+ }
 
 .landing-page .cl01_title {
     max-width: 500px;
