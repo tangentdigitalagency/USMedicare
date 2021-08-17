@@ -23,6 +23,8 @@ import { ArrowRightOutlined, CheckOutlined, PlusOutlined } from '@ant-design/ico
 import Meta from 'antd/es/card/Meta';
 import './LandingPage.css';
 import { useHistory } from 'react-router-dom';
+import {Link} from "react-router-dom"; 
+
 import React from 'react';
 
 function LandingPage(props) {
@@ -50,44 +52,31 @@ function LandingPage(props) {
 					</Row>
 				</Header>
 				<Content>
-					<section className='section-one'>
-						<Row>
-							<Col span={24}>
-								<div className='container-1'>
-									<div className='block-left-hero'>
-										<Row>
-											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Compare Multiple Medicare Insurance Quotes With USA Medicare Quotes
-</h1>
-												<p className='text-white para-white'>
-												Explore your health options beyond the Medicare Part A and Part B offered by the government.  Select a personalized healthcare plan that is a perfect fit for you and the family. Get a Medicare quote today and lower your overall medical costs. <br />
-												Give us a call or fill out the form to speak with a licensed insurance agent for a free, no-obligation consultation and learn about your Medicare Insurance options. 
+				<Content>
+                        <div className="container3 ">
+                            
+                        <div className="inputField">
+                        <div className='text'>
+                                <h1 className='lPHeading text-center'>
+                                Compare Multiple Medicare Insurance Quotes 
+                                </h1>
 
+                                <p className="pText"> Explore your health options beyond the Medicare Part A and Part B offered by the government. Select a personalized healthcare plan that is a perfect fit for you and the family. Get a Medicare quote today and lower your overall medical costs. </p>
+                            </div>
+                            <div className="input">
+                            <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode">
+                            
+                            </Input>
+<Link to="/step2">
 
-												</p>
-						
-												<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step2');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Start Your Free Quote <ArrowRightOutlined />
-												</Button>
-											</Col>
-											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
-												<div className='block-right-hero'>
-													<img src={heroImg} alt='heroImage' className='image-109' sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 1279px) 45vw, 570px' />
-												</div>
-											</Col>
-										</Row>
-									</div>
-								</div>
-							</Col>
-						</Row>
-					</section>
+                            <Button htmlType="button" className="button">
+                                Get My Free Quote
+                            </Button>
+                            </Link>
+                            </div>
+                        </div>
+                        </div>
+                    </Content>
 					<section className='section-two'>
 						<div className='section-two-container'>
 							<Row>

@@ -21,6 +21,7 @@ import Living from './components/living';
 import Info from './components/info';
 import ThankYou from './components/final.jsx';
 import LandingPage from './LandingPage';
+import Landing from './landing';
 
 import aet from './Assets/aet.png';
 import humana from './Assets/humana.png';
