@@ -11,6 +11,38 @@
 
 }
 
+.eKGJdd {
+    color: rgb(79, 71, 71);
+    display: block;
+    text-align: center;
+}
+
+.eKGJdd p {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 0.8rem;
+}
+.eKGJdd svg {
+    display: inline-block;
+    margin-bottom: -0.25rem;
+    margin-right: 0.3125rem;
+    max-width: 1em;
+}
+
+.blockPhone {
+    width: 100%;
+    display: block;
+}
+
+
+
+.iIpwqV a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .container3 {
 	background: url('./Assets/couple.png');
 	background-size:cover;
@@ -49,8 +81,7 @@
     align-items: center;
     min-height: auto;	
     padding: 10px;
-    background-color: red;
-    max-width: 50%;
+        max-width: 50%;
     margin: auto;
     border-radius: 10px;
     box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
