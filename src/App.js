@@ -196,18 +196,20 @@ class App extends Component {
 
 								<Route exact path='/step2'> 
 										<PartAorB 
-											props={this.props}
-											part={this.state.postData.are_you_currently_enrolled_in_both_medicare_part_a_part_b}
-											part={(v) => {
-												this.setState({
-													postData: {
-														...this.state.postData, 
-														jornaya_lead_id: document.getElementById('leadid_token').value, 
-													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
-														are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
-													},
-												});
-											}}
+											// props={this.props}
+											// part={this.state.postData.are_you_currently_enrolled_in_both_medicare_part_a_part_b}
+											// part={(v) => {
+											// 	this.setState({
+											// 		postData: {
+											// 			...this.state.postData, 
+											// 			jornaya_lead_id: document.getElementById('leadid_token').value, 
+											// 		trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
+											// 			are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
+											// 		},
+											// 	});
+											// }}
+
+											
 
 										/>
 								</Route>

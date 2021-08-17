@@ -61,7 +61,7 @@ function LandingPage(props) {
                                 Compare Multiple Medicare Insurance Quotes 
                                 </h1>
 
-                                <p className="pText"> Explore your health options beyond the Medicare Part A and Part B offered by the government. Select a personalized healthcare plan that is a perfect fit for you and the family. Get a Medicare quote today and lower your overall medical costs. </p>
+                              
                             </div>
                             <div className="input">
                             <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode">
@@ -87,7 +87,7 @@ function LandingPage(props) {
 									</p>
 								</Col>
 							</Row>
-							<div className='section-two-imgs '>
+							{/* <div className='section-two-imgs '>
 							<Row gutter={16}>
 								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
 									<img src={aet} className="logoSize" />
@@ -105,174 +105,40 @@ function LandingPage(props) {
 							</Row>
 
 							
-							</div>
+							</div> */}
 						</div>
 					</section>
-					<section className='container'>
-						<Row>
-							<Col span={24}>
-								<h1 className='font-weight-bold ml-md-5'>What is medicare?</h1>
-							</Col>
-						</Row>
-						<Row>
-							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<p>
-								Medicare is a government program that provides individuals 65 years or older healthcare coverage at a small cost. Original Medicare coverage is broken into two parts—Part A and Part B—and is accepted by nearly every doctor and hospital in the country. Medicare Part A covers inpatient or hospital stays while Part B covers outpatient or medical care. 
-
-
-								</p>
-								<p>Together, Part A and B cover about 80% of the typical healthcare costs seniors face—leaving a few significant gaps in coverage. Medicare Supplement (Medigap) plans are supplemental policies designed to help extend coverage, lessen costs, and ultimately give beneficiaries peace of mind at all times.  Explore Medicare plans with US Medicare! 
-
-</p>
-								<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step2');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Start Your Free Quote <ArrowRightOutlined />
-												</Button>
-							</Col>
-							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<div className='service-main-image business'></div>
-							</Col>
-						</Row>
-					</section>
+					
 					
 					<section className='container my-5'>
 						<Row>
-							<Col xs={{ span: 24 }} lg={{ span: 8 }}>
-								<div className='container d-flex h-100'>
-									<div className='justify-content-center align-self-center'>
-										<h1>Why Us?</h1>
-										
-										<Row className='mt-1 '>
-											<Col span={24}>
-											<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step2');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-													Start Free Quote <ArrowRightOutlined />
-												</Button>
-											</Col>
-										</Row>
-									</div>
-								</div>
-							</Col>
-							<Col xs={{ span: 24 }} lg={{ span: 16 }}>
-								<Row>
-									<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<img alt='example' src={budget} />}>
+							
+						<Col xs={{ span: 24 }} lg={{ span: 8 }}>
+										<Card hoverable className='shadow-sm' cover={<img alt='example' src={budget} />}>
 											<Meta title='Affordable Prices' description='no matter your budget we can find the policy right for you and your family.' />
 										</Card>
+
 									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<img alt='example' src={minutes} />}>
-											<Meta title='No Waiting Period' description='Full Coverage The First Day' />
-										</Card>
-									</Col>
-								</Row>
-								<Row className='mt-3'>
-									<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<img alt='example' src={best} />}>
+
+									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
+										<Card hoverable className='shadow-sm' cover={<img alt='example' src={best} />}>
 											<Meta title='No Medical Exam' description='Simple Application - Free Quote—Apply in Minutes' />
 										</Card>
 									</Col>
-									<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-										<Card hoverable className='w-75 shadow-sm' cover={<YourSvg />}>
-											<Meta title='You have options' description='Getting a quote across multiple insurance companies empowers you to know what works best for you.' />
+
+									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
+										<Card hoverable className='shadow-sm' cover={<YourSvg/>}>
+										<Meta title='You have options' description='Getting a quote across multiple insurance companies empowers you to know what works best for you.' />
 										</Card>
 									</Col>
-								</Row>
-							</Col>
 						</Row>
+
+						<div className="sc-1wvmd16-0 eKGJdd"><div><p>Speak with a Medicare Supplement Agent</p><p className="sc-1wvmd16-2 iIpwqV"><svg xmlns="http://www.w3.org/2000/svg" fill="#205bb9" viewBox="0 0 22.8 22.8" className="sc-1pqlmik-0 hRpSpx"><title>phone</title><path d="M5,1A1,1,0,0,1,6.35,1l5.74,5.74a1,1,0,0,1,0,1.41L9.56,10.66l1.93,2.1,2.09,1.93,2.54-2.53a1,1,0,0,1,1.41,0l5.74,5.74a1,1,0,0,1,0,1.39l-.73-.68-5.75-5.74-3.21,3.21-2.83-2.61L8.17,10.64l3.21-3.21L5.64,1.68ZM7.05,17.19C2.49,12.57.67,6.75,2.43,4.89S5.64,1.68,5.64,1.68L5,1h0L4.89,1,4.7,1.2,4,1.88c-.59.57-1.4,1.39-2.29,2.33A3.9,3.9,0,0,0,.77,6.94a10.05,10.05,0,0,0,.66,3.4A21.44,21.44,0,0,0,6.34,17.9h0a21.44,21.44,0,0,0,7.56,4.91,10.05,10.05,0,0,0,3.4.66A4,4,0,0,0,20,22.55c.94-.89,1.75-1.71,2.33-2.3l.68-.7.18-.19.05-.05v0h0l-.73-.68s-1.36,1.45-3.22,3.21S11.68,21.75,7.05,17.19Z" transform="translate(-0.77 -0.68)" fill="#205bb9" fillRule="evenodd" /><path d="M8.17,10.64l3.21-3.21L5.64,1.68S4.19,3,2.43,4.89s.06,7.68,4.62,12.3,10.45,6.39,12.3,4.63,3.22-3.21,3.22-3.21l-5.75-5.74-3.21,3.21-2.83-2.62Zm8.65,3.64-2.5,2.5a1,1,0,0,1-1.39,0L10.1,14.2,10,14.14l-2.6-2.83a1,1,0,0,1,0-1.38L10,7.43,5.62,3.08l-.23.23C4.82,3.87,4,4.66,3.16,5.58A2,2,0,0,0,2.77,7a8.27,8.27,0,0,0,.54,2.72,19.67,19.67,0,0,0,4.45,6.82,19.39,19.39,0,0,0,6.82,4.44,8.27,8.27,0,0,0,2.71.55,2,2,0,0,0,1.38-.39c.92-.87,1.71-1.66,2.27-2.24l.23-.23Z" transform="translate(-0.77 -0.68)" fill="#205bb9" fillRule="evenodd" /></svg><a className="gtm-identifier-phone">(800) 650-0028</a></p></div></div>
+
 					</section>
 					
 					
-					<section className='container mt-md-5'>
-						<Row>
-							<Col span={24} className='text-center'>
-								<h1>What people say about us</h1>
-							</Col>
-						</Row>
-						<Row className='mt-md-5'>
-							{/* <Col xs={{ span: 24 }} lg={{ span: 12 }}>
-								<img
-									src={whatImg}
-									width='723'
-									sizes='(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 91vw, 723px'
-									srcSet='https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%2520(1)-p-500.jpeg 500w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%2520(1)-p-1080.jpeg 1080w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%2520(1)-p-1600.jpeg 1600w, https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/60256fd12e4fb0836a4f1bff_Comprehensive-insurance%20(1).jpg 2000w'
-									alt=''
-									className='client-image-big w-100 rounded'
-								/>
-							</Col> */}
-							{/* <Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}> */}
-								<img src={quote} alt='quote' width='21' className='quote' />
-								<p className='quote-text-v1'>
-									<em className='font-italic italic-text-4'>
-									“I have never had such a great experience getting insurance quotes than I had using US Medicare Quotes.  Their form is super quick and simple.  As soon as I hit submit, they matched me with a great insurance agent named Sandy.  I had all the information and quotes I had to make the decision to switch my insurance.  Thank you US Medicare Quotes for the great connection!" <br/>
-									</em>
-								</p>
-								
-								<Row className='mt-1'>
-									<Col span={24}>
-									<Button
-													onClick={() => {
-														props.changeRoute();
-														history.push('/step2');
-													}}
-													type='block '
-													size='large'
-													className='btn-large text-blue'>
-												Start Your Free Quote <ArrowRightOutlined />
-												</Button>
-									</Col>
-								</Row>
-							{/* </Col> */}
-						</Row>
-					</section>
-
-					<section className='trusted-companies pt-4'>
-						<div className='container'>
-							<Row className='py-5'>
-								<Col span={24}>
-									<h3 className='mx-auto text-center'>
-										Trusted by some of leading <br />
-										companies in the world
-									</h3>
-								</Col>
-							</Row>
-
-							<div className='section-two-imgs '>
-							<Row gutter={16}>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6} className="column">
-									<img src={aet} className="logoSize" />
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={humana} className="logoSize"/>
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={kra} className="logoSize" />
-								</Col>
-								<Col  xs={24} sm={24} md={6} lg={6} xl={6}  className="column">
-									<img src={uhs} className="logoSize aig"/>
-								</Col>
-
-							</Row>
-
-							
-							</div>
-
-							<Row>			
-							</Row>
-						</div>
-					</section>
+				
 				</Content>
 				<Footer className='footer'>
 					<div className='footer-container'>

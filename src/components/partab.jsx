@@ -10,10 +10,16 @@ class PartAOrB extends Component {
  
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.over_65(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b);
+    this.props.over_65(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b).value();
     console.log("Success:", values);
     this.props.history.push("/step3")
   };
+
+  nextStep = (values) => {
+
+    this.props.part(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b);
+
+  }
 
   onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -42,7 +48,7 @@ class PartAOrB extends Component {
             <Form
               name="are_you_over_or_under_65_years_of_age"
               className="mywidth"
-              onFinish={this.onFinish}
+              onFinish={this.nextStep}
               initialValues={{
                 are_you_currently_enrolled_in_both_medicare_part_a_part_b: this.props.are_you_currently_enrolled_in_both_medicare_part_a_part_b,
               }}
@@ -50,7 +56,7 @@ class PartAOrB extends Component {
             > <h3>Are you currently enrolled in both Medicare Part A & Part B?</h3>
               <br />
               <Form.Item
-                name="are_you_over_or_under_65_years_of_age"
+                name="are_you_currently_enrolled_in_both_medicare_part_a_part_b"
                 hasFeedback
                 rules={[
                   {
@@ -60,9 +66,9 @@ class PartAOrB extends Component {
                 ]}
               >
 
-                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>Yes</Button>
+                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="button" onClick={this.nextStep}>Yes</Button>
 
-                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step3")}>No</Button>
+                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="No" className="chooseButton" htmlType="button" onClick={() => this.props.history.push("/step3")}>No</Button>
               </Form.Item>
             
               {/* <Link to="/step2">  */}
