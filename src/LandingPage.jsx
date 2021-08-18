@@ -32,6 +32,17 @@ function LandingPage(props) {
 	const history = useHistory();
 	const { Header, Footer, Content } = Layout;
 	const { Panel } = Collapse;
+
+	function zipCheck(){
+
+		const zip = document.getElementById("zip").value; 
+		if (zip.length > 5) {
+			alert("please enter a correct zip") 
+		}
+		else{
+
+		}
+	}
 	console.log(props);
 	return (
 		<div className='landing-page'>
@@ -72,15 +83,17 @@ function LandingPage(props) {
                               
                             </div>
                             <div className="input">
-                            <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode">
-                            
-                            </Input>
-<Link to="/step2">
 
-                            <Button htmlType="button" className="button">
+						
+                            <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode" required={true} maxLength={5}  type="number"  onKeyPress="if(this.value.length==5) return false;"  />                           
+
+
+					<Link to={"/step2"}>
+                            <Button  className="button" >
                                 Get My Free Quote
                             </Button>
-                            </Link>
+							</Link>
+						
                             </div>
                         </div>
                         </div>
@@ -90,7 +103,7 @@ function LandingPage(props) {
 							<Row>
 								<Col span={24}>
 									<p className='cl01_title'>
-										We are partnered with top rated companies
+										It's Easy 1-2-3
 										<br />
 									</p>
 								</Col>
@@ -122,20 +135,20 @@ function LandingPage(props) {
 						<Row>
 							
 						<Col xs={{ span: 24 }} lg={{ span: 8 }}>
-										<Card hoverable className='shadow-sm' cover={<img alt='example' src={budget} />}>
-											<Meta title='Affordable Prices' description='no matter your budget we can find the policy right for you and your family.' />
+										<Card className=' card shadow-sm' cover={<img alt='example' src={budget} />}>
+											<Meta title='Affordable Prices' title="1" description='no matter your budget we can find the policy right for you and your family.' />
 										</Card>
 
 									</Col>
 
 									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
-										<Card hoverable className='shadow-sm' cover={<img alt='example' src={best} />}>
+										<Card  className='card shadow-sm' cover={<img alt='example' src={best} />}>
 											<Meta title='No Medical Exam' description='Simple Application - Free Quote—Apply in Minutes' />
 										</Card>
 									</Col>
 
 									<Col xs={{ span: 24 }} lg={{ span: 8 }}>
-										<Card hoverable className='shadow-sm' cover={<YourSvg/>}>
+										<Card  className='card shadow-sm' cover={<YourSvg/>}>
 										<Meta title='You have options' description='Getting a quote across multiple insurance companies empowers you to know what works best for you.' />
 										</Card>
 									</Col>
@@ -164,7 +177,7 @@ function LandingPage(props) {
 						<Grid item lg={6} xs={false} />
 						<Grid container lg={3} xs={12}>
 							
-						<Grid item lg={4} xs={12} style={{ alignSelf: 'center' }}>
+						<Grid item lg={8} xs={24} style={{ alignSelf: 'center' }}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://www.quotehound.com/dont-sell-my-info'
@@ -174,7 +187,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center'}}>
+							<Grid item lg={8} xs={24} style={{ alignSelf: 'center'}}>
 								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://quotehound.com/privacy-policy'
@@ -184,7 +197,7 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={4} xs={12} style={{ alignSelf: 'center'}}>
+							<Grid item lg={8} xs={24} style={{ alignSelf: 'center'}}>
 								<Typography
 									style={{
 										fontSize: '15px',

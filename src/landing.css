@@ -1,5 +1,5 @@
 .container3 {
-	background: url('./Assets/couple.png');
+	background: url('./Assets/head.png');
 	background-size:cover;
     background-position: center top;
 	background-repeat: no-repeat;
@@ -87,9 +87,9 @@
         font-size: 14px;
     }
     .container3 {
-        background: url('./Assets/couple.png');
+        background: url('./Assets/head.png');
 	background-size:cover;
-    background-position: center top;
+    background-position: center left;
 	background-repeat: no-repeat;
     min-height: 80vh;	
     position: relative;
@@ -123,5 +123,5 @@
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
         0 100px 80px rgba(0, 0, 0, 0.12);
     }
-    
+
 }

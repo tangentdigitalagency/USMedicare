@@ -17,6 +17,16 @@
     text-align: center;
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
 .eKGJdd p {
     display: inline-block;
     font-size: 1rem;
@@ -35,6 +45,10 @@
     display: block;
 }
 
+.card {
+    margin: 10px;
+    min-height: 350px;
+}
 
 
 .iIpwqV a {
@@ -44,7 +58,7 @@
 }
 
 .container3 {
-	background: url('./Assets/couple.png');
+	background: url('./Assets/head.png');
 	background-size:cover;
     background-position: center top;
 	background-repeat: no-repeat;
