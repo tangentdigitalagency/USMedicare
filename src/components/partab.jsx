@@ -15,11 +15,7 @@ class PartAOrB extends Component {
     this.props.history.push("/step3")
   };
 
-  nextStep = (values) => {
-
-    this.props.part(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b);
-
-  }
+ 
 
   onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -66,7 +62,7 @@ class PartAOrB extends Component {
                 ]}
               >
 
-                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="button" onClick={this.nextStep}>Yes</Button>
+                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="button" onClick={this.props.history.push("/step3")}>Yes</Button>
 
                 <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="No" className="chooseButton" htmlType="button" onClick={() => this.props.history.push("/step3")}>No</Button>
               </Form.Item>

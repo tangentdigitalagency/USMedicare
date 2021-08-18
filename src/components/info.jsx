@@ -3,57 +3,20 @@ import { Form, Button, Input, Select, Progress, Col, Row } from "antd";
 import CommonComponents from "./CommonComponents";
 import { Link, withRouter } from "react-router-dom";
 import { ArrowLeftOutlined } from '@ant-design/icons';
-import Axios from "axios";
-import XMLParser from 'react-xml-parser';
+
+
 class Info extends Component {
 
-  state = { 
-    error: '',
-    loading: false,
-    response: ''
-  }
-
+ 
   onFinish = (values) => {
-
     // this.props.nextStep();
     this.props.setFName(values.first_name);
     this.props.setLName(values.last_name);
-    this.props.setEmail(values.email)
-    this.props.setPhone(values.phone)
-
     console.log("Success:", values);
-    this.setState({
-      loading: true 
-    }, this.PostDataOfLifeInsurance(this.props.postData));
+    this.props.history.push("/step7")
+  }; 
 
-    this.props.callMediaAlpha();
-    this.props.history.push("/thank-you");
-
-  };
-
-  PostDataOfLifeInsurance = (postData) => {
-    console.log(postData);
-
-    Axios.post("https://quotehound.leadspediatrack.com/post.do", null, {
-      params: postData,
-    })
-
-    .then((res) => {
-      console.log(res)
-
-      if (res.status === 200) {
-        this.setState({
-          loading: false, 
-        },() =>{
-                    
-        });
-      }
-    })
-
-    .catch((err) => {
-      if(err) throw err;
-    });
-  };
+ 
 
 
   onFinishFailed = (errorInfo) => {
@@ -62,7 +25,6 @@ class Info extends Component {
 
   render() {
     
-    const {response, loading} = this.state
     return (
       <div className="card shadow-lg" style={{ borderRadius: "25px" }}>
         <Progress percent={99} status="active" showInfo={true} className="pbar" />
@@ -90,9 +52,7 @@ class Info extends Component {
               onFinish={this.onFinish}
               initialValues={{
                 first_name: this.props.first_name,
-                last_name: this.props.last_name,
-                email: this.props.email,
-                phone: this.props.phone
+                last_name: this.props.last_name
               }}
               onFinishFailed={this.onFinishFailed}
             >
@@ -143,58 +103,10 @@ class Info extends Component {
                 </Col>
               </Row>
 
-              <Row gutter={[16, 16]}>
-                <Col span={12}>
-                  <Form.Item
-                    name="email"
-                    hasFeedback
-                    rules={[
-                      {
-                        required: true,
-                        message: "Please Enter a valid email",
-                      }
-                    ]}
-                  >
-                    <Input
-                      size="large"
-                      placeholder="Email"
-                      type="email"
-                    />
-                  </Form.Item>
-                </Col>
-
-                <Col span={12}>
-                  <Form.Item
-                    name="phone"
-                    hasFeedback
-                    rules={[
-                      {
-                        required: true,
-                        message: "Please Enter A Valid Phone",
-                      },
-                      {
-                        max: 12, message: 'Please enter a valid phone'
-                      }
-                    ]}
-                  >
-                    <Input
-                      size="large"
-                      placeholder="Phone Number"
-                      type='text'
-                      id="phone"
-                    > 
-      
-                    </Input>
-                  </Form.Item>
-                </Col>
-              </Row>
-
-              <p className="tcpa"><input type="hidden" id="leadid_tcpa_disclosure" />
-By hitting <b> Next </b> below, I provide my express written consent to the following. Telemarketing calls, text messages, emails, and postal mail from this Web site, our <a href="https://www.quotehound.com/partners">marketing </a> and re-marketing network, and up to eight insurance companies or their affiliates or representatives at the phone number (including wireless number), email address, and postal address provided by me. Telemarketing calls, text messages, emails, and postal mail (including wireless number), email address, and postal address provided by me. Calls and text messages transmitting insurance quotes, or seeking related additional information from me, using an Automated Telephone Dialing System or prerecorded or artificial voices. Electronic video monitoring and recordation of my activities on this Site; and I acknowledge that I may revoke my consent at any time by Calling<a href="tel:1883161350">1 888-316-1350 </a> or emailing “STOP” to<a href="mailto:optout@quotehound.com"> optout@quotehound.com</a>.<b>I AGREE TO ALL OF THE ABOVE AND SEND MY QUOTE</b></p>
 
 
 
-              {/* <Link to="/step6"> */}
+              {/* <Link to="/step7"> */}
               <Form.Item>
                 <Button type="primary" htmlType="submit" block size="large">
                   Next

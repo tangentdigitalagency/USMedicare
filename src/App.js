@@ -21,7 +21,7 @@ import Living from './components/living';
 import Info from './components/info';
 import ThankYou from './components/final.jsx';
 import LandingPage from './LandingPage';
-import Landing from './landing';
+import Email from './components/email';
 
 import aet from './Assets/aet.png';
 import humana from './Assets/humana.png';
@@ -31,7 +31,7 @@ import uhs from './Assets/uhs.png';
 class App extends Component {
 	state = {
 		route: '/',
-		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6', '/thank-you'],
+		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6', '/step7', '/thank-you'],
 		postData: {
 			//extra entries
 			lp_campaign_id: '610208246d0ec',
@@ -196,18 +196,18 @@ class App extends Component {
 
 								<Route exact path='/step2'> 
 										<PartAorB 
-											// props={this.props}
-											// part={this.state.postData.are_you_currently_enrolled_in_both_medicare_part_a_part_b}
-											// part={(v) => {
-											// 	this.setState({
-											// 		postData: {
-											// 			...this.state.postData, 
-											// 			jornaya_lead_id: document.getElementById('leadid_token').value, 
-											// 		trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
-											// 			are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
-											// 		},
-											// 	});
-											// }}
+											props={this.props}
+											part={this.state.postData.are_you_currently_enrolled_in_both_medicare_part_a_part_b}
+											part={(v) => {
+												this.setState({
+													postData: {
+														...this.state.postData, 
+														jornaya_lead_id: document.getElementById('leadid_token').value, 
+													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
+														are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
+													},
+												});
+											}}
 
 											
 
@@ -288,11 +288,8 @@ class App extends Component {
 									<Info 
 										first_name={this.state.postData.first_name}
 										last_name={this.state.postData.last_name}
-										email={this.state.postData.email_address}
-										phone={this.state.postData.phone_home}
-
-										callMediaAlpha={this.callMediaAlpha}
-
+										
+										
 
 										setFName={(v) => {
 											this.setState({
@@ -310,6 +307,19 @@ class App extends Component {
 												},
 											});
 										}}
+
+									/>
+								</Route>
+								<Route path='/step7'>
+									<Email
+										
+										email={this.state.postData.email_address}
+										phone={this.state.postData.phone_home}
+
+										callMediaAlpha={this.callMediaAlpha}
+
+
+										
 										setEmail={(v) => {
 											this.setState({
 												postData: {
@@ -347,7 +357,7 @@ class App extends Component {
 				
 
 				<Grid container xs={12} align='center' style={{ justifyContent: 'center', paddingTop: '20px'}}>
-					<Grid container xs={8} style={{ justifyContent: 'center' }}>
+					{/* <Grid container xs={8} style={{ justifyContent: 'center' }}>
 						<Grid item xs={12}>
 							<Typography style={{ fontWeight: 700, lineHeight: 1.5, paddingBottom: '25px',}}>Providers Include:</Typography>
 							<div className='section-two-imgs '>
@@ -372,7 +382,7 @@ class App extends Component {
 
 						</Grid>
 
-					</Grid>
+					</Grid> */}
 					<Grid container xs={10} style={{ paddingBottom: '1rem', marginTop: '1rem' }}>
 						<Grid item lg={3} xs={12} style={{ alignSelf: 'flex-end' }}>
 							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 US Medicare Quotes</Typography>

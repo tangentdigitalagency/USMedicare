@@ -60,6 +60,7 @@ class Landing extends Component {
                         <div className="container3 ">
                             
                         <div className="inputField">
+
                         <div className='text'>
                                 <h1 className='lPHeading text-center'>
                                 Compare Multiple Medicare Insurance Quotes 

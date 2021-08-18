@@ -73,8 +73,10 @@ function LandingPage(props) {
 				<Content>
 				<Content>
                         <div className="container3 ">
-                            
+					
+						<h1 className="header"> You are minutes away from saving money</h1>
                         <div className="inputField">
+							
                         <div className='text'>
                                 <h1 className='lPHeading text-center'>
                                 Compare Multiple Medicare Insurance Quotes 
@@ -136,7 +138,7 @@ function LandingPage(props) {
 							
 						<Col xs={{ span: 24 }} lg={{ span: 8 }}>
 										<Card className=' card shadow-sm' cover={<img alt='example' src={budget} />}>
-											<Meta title='Affordable Prices' title="1" description='no matter your budget we can find the policy right for you and your family.' />
+											<Meta title='Affordable Prices' description='no matter your budget we can find the policy right for you and your family.' />
 										</Card>
 
 									</Col>
