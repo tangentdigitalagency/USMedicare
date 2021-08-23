@@ -31,7 +31,7 @@ import uhs from './Assets/uhs.png';
 class App extends Component {
 	state = {
 		route: '/',
-		routes: ['/step1', '/step2', '/step3', '/step4', '/step5', '/step6', '/step7', '/thank-you'],
+		routes: ['/step2', '/step3', '/step4', '/step5', '/step6', '/step7', '/thank-you'],
 		postData: {
 			//extra entries
 			lp_campaign_id: '610208246d0ec',
@@ -202,8 +202,8 @@ class App extends Component {
 												this.setState({
 													postData: {
 														...this.state.postData, 
-														jornaya_lead_id: document.getElementById('leadid_token').value, 
-													trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
+													// 	jornaya_lead_id: document.getElementById('leadid_token').value, 
+													// trusted_form_cert_id: document.getElementById('trusted_form_cert_id_0').value ,
 														are_you_currently_enrolled_in_both_medicare_part_a_part_b: v,
 													},
 												});

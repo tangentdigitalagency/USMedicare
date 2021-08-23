@@ -10,7 +10,7 @@ class PartAOrB extends Component {
  
   onFinish = (values) => {
     // this.props.nextStep();
-    this.props.over_65(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b).value();
+    this.props.over_65(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b);
     console.log("Success:", values);
     this.props.history.push("/step3")
   };
@@ -62,7 +62,7 @@ class PartAOrB extends Component {
                 ]}
               >
 
-                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="button" onClick={this.props.history.push("/step3")}>Yes</Button>
+                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="button" onClick={() => this.props.history.push("/step3")}>Yes</Button>
 
                 <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="No" className="chooseButton" htmlType="button" onClick={() => this.props.history.push("/step3")}>No</Button>
               </Form.Item>
