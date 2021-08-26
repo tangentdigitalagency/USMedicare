@@ -74,23 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	  
 	  </script> 
 
-<!-- Generate a TrustedForm Certificate -->
-<script type="text/javascript">
-	(function() {
-		var field = 'trusted_form_cert_id';
-		var provideReferrer = false;
-		var tf = document.createElement('script');
-		tf.type = 'text/javascript'; tf.async = true; 
-		tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-		'://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random();
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
-	)();
-	</script>
-	<noscript>
-		<img src="http://api.trustedform.com/ns.gif" />
-	</noscript>
-	
-
 
 <script id="LeadiDscript" type="text/javascript">
 	(function() {
@@ -106,6 +89,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=eb823e1f-5094-044b-8797-f648627f0c25&snippet_version=2' /></noscript>
 
 	<input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
+
+
+<!-- Generate a TrustedForm Certificate -->
+<script type="text/javascript">
+	(function() {
+		var field = 'trusted_form_cert_id';
+		var provideReferrer = false;
+		var tf = document.createElement('script');
+		tf.type = 'text/javascript'; tf.async = true; 
+		tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+		'://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random();
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+	)();
+	</script>
+	<noscript>
+		<img src="http://api.trustedform.com/ns.gif" />
+	</noscript>
+
+	<input type="hidden" name="trusted_form_cert_id" id="trusted_form_cert_id" value="" />
+	
 
 </body>
 </html>

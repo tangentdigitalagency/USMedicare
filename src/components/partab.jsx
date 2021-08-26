@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Form, Button, Input, Progress, Select} from "antd";
+import {Form, Button, Input, Progress, Select, Radio} from "antd";
 import CommonComponents from "./CommonComponents"; 
 import {Link} from "react-router-dom"; 
 import {Redirect} from "react-router-dom"; 
@@ -7,14 +7,21 @@ import {withRouter } from "react-router-dom";
 const {Option} = Select;
 
 class PartAOrB extends Component {
- 
-  onFinish = (values) => {
-    // this.props.nextStep();
-    this.props.over_65(values.are_you_currently_enrolled_in_both_medicare_part_a_part_b);
-    console.log("Success:", values);
-    this.props.history.push("/step3")
-  };
 
+  state = {};
+ 
+ nextStep = (ab) => {
+
+  var part = ab.target.dataset.value;
+
+  console.log(ab.target.value)
+
+  this.props.partAOrB(ab.target.dataset.value);
+
+  this.props.history.push("/step3")
+
+
+ } 
  
 
   onFinishFailed = (errorInfo) => {
@@ -42,7 +49,7 @@ class PartAOrB extends Component {
             style={{ paddingTop:"0px" }}
           >
             <Form
-              name="are_you_over_or_under_65_years_of_age"
+              name="are_you_currently_enrolled_in_both_medicare_part_a_part_b"
               className="mywidth"
               onFinish={this.nextStep}
               initialValues={{
@@ -62,9 +69,13 @@ class PartAOrB extends Component {
                 ]}
               >
 
-                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="Yes" className="chooseButton" htmlType="button" onClick={() => this.props.history.push("/step3")}>Yes</Button>
+<Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" className="chooseButton" id="yes" data-value="yes" value={"yes"} onClick={(ab) => this.nextStep(ab)} >Yes</Button>
 
-                <Button size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" defaultValue="No" className="chooseButton" htmlType="button" onClick={() => this.props.history.push("/step3")}>No</Button>
+        
+
+              
+<Button  size="large" name="are_you_currently_enrolled_in_both_medicare_part_a_part_b" className="chooseButton" id="no" value={"no"} data-value="no" onClick={(ab) => this.nextStep(ab)} >No</Button>
+
               </Form.Item>
             
               {/* <Link to="/step2">  */}

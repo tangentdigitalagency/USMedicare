@@ -7,14 +7,20 @@ const {Option} = Select;
 
 
 class Gender extends Component {
-	formRef = React.createRef();
 	state = {};
 
 	
-	onFinish = (values) => {
-		this.props.chooseGender(values.gender)		
-		console.log('Success:', values);
-		this.props.history.push('/step3');
+	onFinish = (gen) => {
+	
+
+    var gender = gen.target.dataset.value;
+
+    console.log(gender)
+  
+    this.props.chooseGender(gen.target.dataset.value)
+  
+    this.props.history.push("/step4")
+  
 		// this.props.nextStep();
 	};
 
@@ -29,7 +35,7 @@ class Gender extends Component {
 				<Progress percent={40} status='active' showInfo={true} className='pbar' />
 				<CommonComponents currentStep={this.props.currentStep} totalSteps={this.props.totalSteps} previousStep={this.props.previousStep} />
 				<div className='p-2'>
-					<Link to='/step1'>
+					<Link to='/step2'>
 						<Button type='primary' shape='circle'>
 							<ArrowLeftOutlined className='anticon' />
 						</Button>
@@ -59,9 +65,9 @@ class Gender extends Component {
                   }
                 ]}
               >
-                  <Button size="large" name="gender" defaultValue="Yes" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step4")}>Male</Button>
+                  <Button size="large" name="gender" value={"male"} id="male" data-value="male" className="chooseButton" onClick={(gen) => this.onFinish(gen)}>Male</Button>
 
-<Button size="large" name="gender" defaultValue="No" className="chooseButton" htmlType="submit" onClick={() => this.props.history.push("/step4")}>Female</Button>
+<Button size="large" name="gender" id="female" value={"female"} data-value="female" className="chooseButton" onClick={(gen) => this.onFinish(gen)}>Female</Button>
               </Form.Item>
             
               {/* <Link to="/step2">  */}
