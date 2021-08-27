@@ -54,7 +54,7 @@ function LandingPage(props) {
 								<img src={logo} width='181' alt='logo' />
 							</a>
 						</Col>
-						<Col xs={{ span: 24 }} lg={{ span: 12 }} className='text-right'>
+						<Col xs={{ span: 12 }} lg={{ span: 12 }} className='text-right'>
 						<Button
 									type='primary'
 									size='middle'
@@ -75,7 +75,7 @@ function LandingPage(props) {
 				<Content>
                         <div className="container3 ">
 					
-						<h1 className="header"> You are minutes away from saving money. Compare 2021 Medicare Supplemental Plans</h1>
+						<h1 className="header"> You are minutes away from saving on your Medicare Insurance</h1>
                         <div className="inputField">
 							
                         <div className='text'>
@@ -178,11 +178,11 @@ function LandingPage(props) {
 							<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>2021 US Medicare Quotes</Typography>
 							<Typography style={{fontSize: '12px', color: 'rgb(166, 166, 166)' }}>Powered By Quotehound</Typography>
 						</Grid>
-						<Grid item lg={6} xs={false} />
-						<Grid container lg={3} xs={12}>
+						<Grid item lg={12} xs={12} />
+						<Grid container lg={12} xs={12}>
 							
-						<Grid item lg={8} xs={24} style={{ alignSelf: 'center' }}>
-								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
+						<Grid item lg={12} xs={12} style={{ alignSelf: 'left' }}>
+								<Typography style={{ fontSize: '11px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://www.quotehound.com/dont-sell-my-info'
 										// @ts-ignore
@@ -191,8 +191,8 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={8} xs={24} style={{ alignSelf: 'center'}}>
-								<Typography style={{ fontSize: '15px', color: 'rgb(166, 166, 166)' }}>
+							<Grid item lg={12} xs={12} style={{ alignSelf: 'left'}}>
+								<Typography style={{ fontSize: '11px', color: 'rgb(166, 166, 166)' }}>
 									<a
 										href='https://quotehound.com/privacy-policy'
 										// @ts-ignore
@@ -201,10 +201,10 @@ function LandingPage(props) {
 									</a>
 								</Typography>
 							</Grid>
-							<Grid item lg={8} xs={24} style={{ alignSelf: 'center'}}>
+							<Grid item lg={12} xs={12} style={{ alignSelf: 'left'}}>
 								<Typography
 									style={{
-										fontSize: '15px',
+										fontSize: '11px',
 										color: 'rgb(166, 166, 166)',
 										fontWeight: 600,
 									}}>

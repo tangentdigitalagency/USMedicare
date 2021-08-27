@@ -151,6 +151,8 @@ background-color: rgba(255, 255, 255, 0.9);
 
     .lPHeading {
         font-size: 19px;
+        font-weight: bold;
+        margin-top: 15px;
     }
 
     .pText {
@@ -402,7 +404,7 @@ background-color: rgba(255, 255, 255, 0.9);
  }
 @media (min-width: 992px) { 
 	.logosTop{
-		width: 50%;
+		width: 100%;
 	}
  }
 
