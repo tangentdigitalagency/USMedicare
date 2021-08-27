@@ -16,6 +16,10 @@
     display: block;
     text-align: center;
 }
+.eKGJdd p {
+    font-size: 25px;
+}
+
 
 input[type='number'] {
     -moz-appearance:textfield;
@@ -352,12 +356,12 @@ background-color: rgba(255, 255, 255, 0.9);
 }
 
 .landing-page .div-block-58 {
-    padding-top: 35px;
+
+    padding-top: 10px;
 }
 
 .landing-page .section-two {
-    padding: 25px 5%;
-    margin: 50px;
+    margin: 5px;
 }
 
 .landing-page .section-two-imgs {
@@ -407,8 +411,7 @@ background-color: rgba(255, 255, 255, 0.9);
     margin-right: auto;
     margin-left: auto;
     color: #8a94a6;
-    font-size: 14px;
-    line-height: 25px;
+    font-size: 25px;
     font-weight: 700;
     text-align: center;
     letter-spacing: 1px;
@@ -420,8 +423,25 @@ background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
 }
 
+.speak {
+    font-size: 25px;
+}
+
+.gtm-identifier-phone {
+    font-size: 25px;
+}
+
+.ant-card-meta-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.ant-card-meta-description {
+    font-size: 18px;
+}
+
 .landing-page .section-two-imgs {
-    padding: 2rem 1rem;
+    padding: 15px;
 }
 
 .landing-page .ml-1 {
