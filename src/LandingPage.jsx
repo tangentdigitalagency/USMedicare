@@ -56,7 +56,9 @@ class LandingPage extends Component {
 							</a>
 						</Col>
 						<Col xs={{ span: 12 }} lg={{ span: 12 }} className='text-right'>
-						<PhonexaCode />
+						<Button>
+					<a href="tel:8887013068" className=""> 888-701-3068</a>
+					</Button>
 
 						</Col>
 					</Row>
