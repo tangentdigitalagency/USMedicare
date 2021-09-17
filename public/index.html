@@ -75,6 +75,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	  </script> 
 
 
+<script> 
+
+
+function geetParam(p) {
+
+	var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+	return match && decodeURIComponent(match[1].replace(/\+/g), '');
+
+}
+
+function getExpiryRecord(value) {
+	var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 90 day expiry in milliseconds
+	
+	var expiryDate = new Date().getTime() + expiryPeriod;
+	return {
+	value: value,
+	expiryDate: expiryDate
+	};
+	}
+
+	function addUid() {
+	var uidParam = getParam('uid');
+	var uidFormFields = ['uid', 'foobar']; // all possible gclid form field ids here
+	var uidRecord = null;
+	var currUidFormField;
+
+	
+	uidFormFields.forEach(function (field) {
+	if (document.getElementById(field)) {
+		currUidFormField = document.getElementById(field);
+	}
+	});
+	
+	if (uidParam && isGclsrcValid) {
+		uidRecord = getExpiryRecord(uidParam);
+	localStorage.setItem('uid', JSON.stringify(uidRecord));
+	}
+	
+	var uid = uidRecord || JSON.parse(localStorage.getItem('uid'));
+	var isUidValid = uid && new Date().getTime() < uid.expiryDate;
+	
+	if (currUidFormField && isUidValid) {
+		currUidFormField.value = uid.value;
+	}
+	}
+
+
+	document.getElementById(uid).value = uid.value;
+
+	console.log(uid.value)
+
+</script>
+
+
+<input type="hidden" value="" name="uid" id="uid"/>
+
 <script id="LeadiDscript" type="text/javascript">
 	(function() {
 	var s = document.createElement('script');

@@ -12,6 +12,8 @@ import { Button, Typography, Progress, Row, Col } from 'antd';
 import { PhoneOutlined } from '@ant-design/icons';
 import tran from './Assets/tran.png'
 
+import PhonexaCode from './PhonexaCode';
+
 
 import DesiredCoverage from './components/over65';
 import PartAorB from './components/partab';
@@ -156,18 +158,8 @@ class App extends Component {
 							<li className='nav-item'>
 							{/* <b className='nav-item' style={{padding: "10px"}}>Speak To An Agent</b>  */}
 
-								<Button
-									type='primary'
-									size='middle'
-									icon={
-										<PhoneOutlined
-											// @ts-ignore
-											rotate='90'
-										/>
-									}
-									href={'tel:+18885671448'}>
-									888-567-1448
-								</Button>
+							<PhonexaCode />
+
 							</li>
 						</ul>
 					</div>

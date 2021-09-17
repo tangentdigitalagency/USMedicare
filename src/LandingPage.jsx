@@ -1,12 +1,15 @@
 import { Button, Card, Col, Collapse, Layout, Row, Typography, Form,  Input } from 'antd';
 import Grid from '@material-ui/core/Grid';
 
+
 import logo from './Assets/usmq.png';
 import aet from './Assets/aet.png';
 import humana from './Assets/humana.png';
 import kra from './Assets/kra.png';
 import uhs from './Assets/uhs.png';
 import { PhoneOutlined } from '@ant-design/icons';
+
+import PhonexaCode from './PhonexaCode';
 
 import heroImg from './Assets/couple.png';
 // import aig from './Assets/aig.png';
@@ -23,29 +26,27 @@ import { ReactComponent as YourSvg } from './Assets/img/svg_2.svg';
 import { ArrowRightOutlined, CheckOutlined, PlusOutlined } from '@ant-design/icons';
 import Meta from 'antd/es/card/Meta';
 import './LandingPage.css';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import {Link} from "react-router-dom"; 
 
-import React from 'react';
+import React, {Component} from 'react';
+import { Content, Footer, Header } from 'antd/lib/layout/layout';
 
-function LandingPage(props) {
-	const history = useHistory();
-	const { Header, Footer, Content } = Layout;
-	const { Panel } = Collapse;
 
-	function zipCheck(){
+class LandingPage extends Component {
 
-		const zip = document.getElementById("zip").value; 
-		if (zip.length > 5) {
-			alert("please enter a correct zip") 
-		}
-		else{
+	nextStep = () => {
 
-		}
+		var uid = JSON.parse(localStorage.getItem('uid'));
+
+		this.props.history.push("/step2?uid=" + uid)
 	}
-	console.log(props);
-	return (
-		<div className='landing-page'>
+
+
+	render(){
+
+		return(
+			<div className='landing-page'>
 			<Layout>
 				<Header>
 					<Row>
@@ -55,19 +56,8 @@ function LandingPage(props) {
 							</a>
 						</Col>
 						<Col xs={{ span: 12 }} lg={{ span: 12 }} className='text-right'>
-						<Button
-									type='primary'
-									size='middle'
-									icon={
-										<PhoneOutlined
-											// @ts-ignore
-											rotate='90'
-										/>
-									}
-									href={'tel:+18885671448'}>
-									888-567-1448 
-								</Button>
-								TTY: 711 
+						<PhonexaCode />
+
 						</Col>
 					</Row>
 				</Header>
@@ -91,11 +81,11 @@ function LandingPage(props) {
                             <Input className="inputArea" autoFocus={true} placeholder="Enter Your Zipcode" required={true} maxLength={5}  type="number"  onKeyPress="if(this.value.length==5) return false;"  />                           
 
 
-					<Link to={"/step2"}>
-                            <Button  className="button" >
+				
+                            <Button  className="button" onClick={this.nextStep}>
                                 Get My Free Quote
                             </Button>
-							</Link>
+	
 						
                             </div>
                         </div>
@@ -224,7 +214,8 @@ function LandingPage(props) {
 				</Footer>
 			</Layout>
 		</div>
-	);
+		)
+	}
 }
 
 export default LandingPage;
